@@ -9,7 +9,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { getNav } from '../../../apis/nav'
+import { getNav } from '../../../apis'
 import { useLayoutStore } from '../../../stores/layout'
 
 const items = ref([])

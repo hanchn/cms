@@ -23,5 +23,17 @@ export default defineConfig({
     }
   ],
   envDir: 'env',
+  resolve: {
+    alias: {
+      '@': path.resolve(process.cwd(), 'src'),
+      '@apis': path.resolve(process.cwd(), 'src/apis'),
+      '@views': path.resolve(process.cwd(), 'src/views'),
+      '@layouts': path.resolve(process.cwd(), 'src/layouts'),
+      '@stores': path.resolve(process.cwd(), 'src/stores'),
+      '@utils': path.resolve(process.cwd(), 'src/utils'),
+      '@config': path.resolve(process.cwd(), 'src/config'),
+      '@mock': path.resolve(process.cwd(), 'mock')
+    }
+  },
   server: { port: 5173, open: false }
 })

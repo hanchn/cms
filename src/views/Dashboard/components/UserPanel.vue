@@ -7,7 +7,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { getUsers } from '../../../apis/user'
+import { getUsers } from '../../../apis'
 const users = ref([])
 async function load(){
   users.value = await getUsers()
