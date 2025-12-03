@@ -1,8 +1,17 @@
-import AdminLayout from '../layouts/AdminLayout.vue'
+import AdminLayout from '../layouts/Admin/Index.vue'
+import { useLayoutStore } from '../stores/layout'
 import { h } from 'vue'
 
-function withLayout(Page) {
-  return { render() { return h(AdminLayout, null, { default: () => h(Page) }) } }
+function withLayout(Page, name) {
+  return {
+    name: `${name}WithLayout` ,
+    setup() {
+      const store = useLayoutStore()
+      return () => store.enabled && !store.noLayoutPages.includes(name)
+        ? h(AdminLayout, null, { default: () => h(Page) })
+        : h(Page)
+    }
+  }
 }
 
 export function createAutoRoutes() {
@@ -11,6 +20,6 @@ export function createAutoRoutes() {
     const parts = key.split('/')
     const i = parts.indexOf('views')
     const folder = parts[i + 1]
-    return { path: `/${folder.toLowerCase()}`, name: folder, component: withLayout(mod.default) }
+    return { path: `/${folder.toLowerCase()}`, name: folder, component: withLayout(mod.default, folder) }
   }).sort((a, b) => a.path.localeCompare(b.path))
 }
