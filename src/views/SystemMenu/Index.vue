@@ -11,12 +11,13 @@
 
 <script setup>
 import { ref, reactive, provide } from 'vue'
+import { initialMenuItems } from './initData'
 import Filter from './components/Filter.vue'
 import List from './components/List.vue'
 import EditModal from './components/EditModal.vue'
 import { fetchMenuList, createMenu, updateMenu, deleteMenu } from '@apis/system/menu'
 
-const state = reactive({ items: [], total: 0, page: 1, pageSize: 10, query: {}, visible: false, current: null })
+const state = reactive({ items: [...initialMenuItems], total: initialMenuItems.length, page: 1, pageSize: 10, query: {}, visible: false, current: null })
 
 async function load(){
   const res = await fetchMenuList({ ...state.query, page: state.page, pageSize: state.pageSize })

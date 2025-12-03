@@ -25,8 +25,9 @@
 
 <script setup>
 import { reactive } from 'vue'
-const emit = defineEmits(['search'])
+import { inject, reactive } from 'vue'
+const ctx = inject('systemMenu')
 const local = reactive({ name: '', status: undefined, type: undefined })
-function emitSearch(){ emit('search', { ...local }) }
+function emitSearch(){ ctx.onSearch({ ...local }) }
 function reset(){ local.name=''; local.status=undefined; local.type=undefined; emitSearch() }
 </script>
