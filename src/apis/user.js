@@ -1,4 +1,4 @@
-import { get } from './main'
+import { get } from '@apis/main'
 import { apiBaseUrl } from '../config/env'
 
 export function getUsers(params) {

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { createAutoRoutes } from './auto'
+import { createAutoRoutes } from '@utils/auto-routes'
 
 const pages = createAutoRoutes()
 const routes = [

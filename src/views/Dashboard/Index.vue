@@ -7,6 +7,6 @@
 </template>
 
 <script setup>
-import { env } from '../../config/env'
+import { env } from '@config/env'
 import UserPanel from './components/UserPanel.vue'
 </script>
