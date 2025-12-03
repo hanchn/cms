@@ -1,6 +1,16 @@
 [
   { "key": "Dashboard", "title": "仪表盘", "path": "/dashboard", "layout": true },
   {
+    "key": "SystemConfig",
+    "title": "系统配置",
+    "layout": true,
+    "children": [
+      { "key": "SystemMenu", "title": "菜单管理", "path": "/systemmenu", "layout": true },
+      { "key": "SystemPermission", "title": "权限管理", "path": "/systempermission", "layout": true },
+      { "key": "SystemUser", "title": "用户管理", "path": "/systemuser", "layout": true }
+    ]
+  },
+  {
     "key": "Material",
     "title": "素材",
     "layout": true,

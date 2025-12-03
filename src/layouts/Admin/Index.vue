@@ -34,12 +34,14 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import SideNav from './components/SideNav.vue'
 import { useAuthStore } from '@stores/auth'
 const collapsed = ref(false)
 const auth = useAuthStore()
-function login(){ auth.login({ name: 'Admin', avatar: 'https://avatars.githubusercontent.com/u/9919?s=40&v=4' }) }
-function logout(){ auth.logout() }
+const router = useRouter()
+function login(){ router.push('/login') }
+function logout(){ auth.logout(); localStorage.removeItem('token'); router.replace('/login') }
 </script>
 
 <style scoped>
