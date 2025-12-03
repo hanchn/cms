@@ -1,8 +1,8 @@
 <template>
   <a-layout style="min-height: 100vh">
-    <a-layout-sider theme="dark" width="240" collapsible :collapsed="collapsed" @collapse="val => collapsed = val">
+    <a-layout-sider theme="dark" width="240" collapsible v-model:collapsed="collapsed" breakpoint="lg" :collapsedWidth="64">
       <div class="brand">CMS</div>
-      <SideNav />
+      <SideNav :collapsed="collapsed" />
     </a-layout-sider>
     <a-layout>
       <a-layout-header class="header">
