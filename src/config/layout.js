@@ -1,0 +1,1 @@
+export const layoutEnabled = import.meta.env.VITE_LAYOUT_ENABLED !== 'false'
