@@ -1,3 +1,14 @@
 [
-  { "key": "Dashboard", "title": "仪表盘", "path": "/dashboard", "layout": true }
+  { "key": "Dashboard", "title": "仪表盘", "path": "/dashboard", "layout": true },
+  {
+    "key": "Material",
+    "title": "素材",
+    "layout": true,
+    "children": [
+      { "key": "MaterialImage", "title": "图片素材", "path": "/materialimage", "layout": true },
+      { "key": "MaterialVideo", "title": "视频素材", "path": "/materialvideo", "layout": true },
+      { "key": "MaterialTemplate", "title": "模板素材", "path": "/materialtemplate", "layout": true },
+      { "key": "MaterialFloor", "title": "楼层素材", "path": "/materialfloor", "layout": true }
+    ]
+  }
 ]
