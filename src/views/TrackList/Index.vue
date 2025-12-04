@@ -8,16 +8,16 @@
 
 <script setup>
 import { reactive, provide } from 'vue'
-import Toolbar from './components/Toolbar.vue'
-import List from './components/List.vue'
-import CreateModal from './components/CreateModal.vue'
-import { fetchI18nList, createI18n, deleteI18n } from '@apis/i18n'
+import Toolbar from '../Track/components/Toolbar.vue'
+import List from '../Track/components/List.vue'
+import CreateModal from '../Track/components/CreateModal.vue'
+import { fetchTrackList, createTrack, deleteTrack } from '@apis/track'
 
 const state = reactive({ items: [], total: 0, page: 1, pageSize: 10, loading: false, createVisible: false })
 
 async function load(){
   state.loading = true
-  const res = await fetchI18nList({ page: state.page, pageSize: state.pageSize })
+  const res = await fetchTrackList({ page: state.page, pageSize: state.pageSize })
   state.items = res.items || []
   state.total = res.total || 0
   state.loading = false
@@ -25,10 +25,10 @@ async function load(){
 
 function onPageChange(p, ps){ state.page = p; state.pageSize = ps; load() }
 function openCreate(){ state.createVisible = true }
-async function onCreateSubmit(data){ await createI18n(data); state.createVisible = false; load() }
-async function onRemove(id){ await deleteI18n(id); load() }
+async function onCreateSubmit(data){ await createTrack(data); state.createVisible = false; load() }
+async function onRemove(id){ await deleteTrack(id); load() }
 
-provide('i18n', { state, load, onPageChange, openCreate, onCreateSubmit, onRemove })
+provide('track', { state, load, onPageChange, openCreate, onCreateSubmit, onRemove })
 
 load()
 </script>

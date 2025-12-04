@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "id": 1, "key": "home.title", "zh": "首页", "en": "Home", "desc": "首页标题" },
+    { "id": 2, "key": "nav.products", "zh": "产品", "en": "Products", "desc": "导航：产品" }
+  ],
+  "total": 2
+}

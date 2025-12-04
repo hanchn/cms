@@ -8,9 +8,9 @@
 
 <script setup>
 import { reactive, provide } from 'vue'
-import Toolbar from './components/Toolbar.vue'
-import List from './components/List.vue'
-import CreateModal from './components/CreateModal.vue'
+import Toolbar from '../I18n/components/Toolbar.vue'
+import List from '../I18n/components/List.vue'
+import CreateModal from '../I18n/components/CreateModal.vue'
 import { fetchI18nList, createI18n, deleteI18n } from '@apis/i18n'
 
 const state = reactive({ items: [], total: 0, page: 1, pageSize: 10, loading: false, createVisible: false })
