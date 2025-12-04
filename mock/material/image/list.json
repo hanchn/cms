@@ -1,0 +1,17 @@
+{
+  "items": [
+    { "id": 1, "name": "示例图片 1", "src": "https://picsum.photos/seed/mi1/400/400" },
+    { "id": 2, "name": "示例图片 2", "src": "https://picsum.photos/seed/mi2/400/400" },
+    { "id": 3, "name": "示例图片 3", "src": "https://picsum.photos/seed/mi3/400/400" },
+    { "id": 4, "name": "示例图片 4", "src": "https://picsum.photos/seed/mi4/400/400" },
+    { "id": 5, "name": "示例图片 5", "src": "https://picsum.photos/seed/mi5/400/400" },
+    { "id": 6, "name": "示例图片 6", "src": "https://picsum.photos/seed/mi6/400/400" },
+    { "id": 7, "name": "示例图片 7", "src": "https://picsum.photos/seed/mi7/400/400" },
+    { "id": 8, "name": "示例图片 8", "src": "https://picsum.photos/seed/mi8/400/400" },
+    { "id": 9, "name": "示例图片 9", "src": "https://picsum.photos/seed/mi9/400/400" },
+    { "id": 10, "name": "示例图片 10", "src": "https://picsum.photos/seed/mi10/400/400" },
+    { "id": 11, "name": "示例图片 11", "src": "https://picsum.photos/seed/mi11/400/400" },
+    { "id": 12, "name": "示例图片 12", "src": "https://picsum.photos/seed/mi12/400/400" }
+  ],
+  "total": 48
+}
