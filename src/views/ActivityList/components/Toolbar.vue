@@ -1,17 +1,14 @@
 <template>
   <div class="toolbar">
     <a-space>
-      <a-button type="primary" @click="goCreate">新建模板</a-button>
+      <a-button type="primary" @click="ctx.openCreate()">新建活动</a-button>
     </a-space>
   </div>
 </template>
 
 <script setup>
 import { inject } from 'vue'
-import { useRouter } from 'vue-router'
-const ctx = inject('floorTemplate')
-const router = useRouter()
-function goCreate(){ router.push('/materialfloordetail') }
+const ctx = inject('activity')
 </script>
 
 <style scoped>
