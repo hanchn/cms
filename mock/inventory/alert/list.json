@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "sku": "SKU004", "type": "low", "threshold": 50, "current": 30, "suggest": "建议补货 40" },
+    { "sku": "SKU005", "type": "high", "threshold": 300, "current": 420, "suggest": "建议促销清理 120" }
+  ],
+  "total": 2
+}

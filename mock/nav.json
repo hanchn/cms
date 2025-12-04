@@ -20,7 +20,21 @@
       { "key": "GoodsBrand", "title": "商品品牌", "path": "/goodsbrand", "layout": true }
     ]
   },
-  { "key": "Inventory", "title": "库存", "path": "/inventory", "layout": true },
+  {
+    "key": "Inventory",
+    "title": "库存",
+    "layout": true,
+    "children": [
+      { "key": "InventoryInbound", "title": "入库管理", "path": "/inventoryinbound", "layout": true },
+      { "key": "InventoryOutbound", "title": "出库管理", "path": "/inventoryoutbound", "layout": true },
+      { "key": "InventoryQuery", "title": "库存查询", "path": "/inventoryquery", "layout": true },
+      { "key": "InventoryStocktaking", "title": "盘点管理", "path": "/inventorystocktaking", "layout": true },
+      { "key": "InventoryTransfer", "title": "调拨管理", "path": "/inventorytransfer", "layout": true },
+      { "key": "InventoryAlert", "title": "库存预警", "path": "/inventoryalert", "layout": true },
+      { "key": "InventoryBatchLocation", "title": "批次与库位", "path": "/inventorybatchlocation", "layout": true },
+      { "key": "InventoryReport", "title": "报表与对账", "path": "/inventoryreport", "layout": true }
+    ]
+  },
   {
     "key": "Order",
     "title": "订单",
@@ -38,6 +52,7 @@
   { "key": "Customer", "title": "客户管理", "path": "/customer", "layout": true },
   { "key": "Service", "title": "客服", "path": "/service", "layout": true },
   { "key": "SupplyChain", "title": "供应链", "path": "/supplychain", "layout": true },
+  { "key": "Freight", "title": "货运", "path": "/freight", "layout": true },
   {
     "key": "MasterData",
     "title": "主数据",

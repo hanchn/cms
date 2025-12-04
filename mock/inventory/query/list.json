@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "sku": "SKU001", "available": 120, "reserved": 10, "batch": "B202512A", "location": "A-01-01", "expireDate": "2026-01-01" },
+    { "sku": "SKU002", "available": 80, "reserved": 5, "batch": "B202512B", "location": "A-01-02", "expireDate": "2026-03-01" }
+  ],
+  "total": 2
+}

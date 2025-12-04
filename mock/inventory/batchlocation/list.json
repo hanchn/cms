@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "batch": "B202512A", "sku": "SKU001", "location": "A-01-01", "expireDate": "2026-01-01", "quality": "合格" },
+    { "batch": "B202512B", "sku": "SKU002", "location": "A-01-02", "expireDate": "2026-03-01", "quality": "待检" }
+  ],
+  "total": 2
+}

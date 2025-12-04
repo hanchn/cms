@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "id": 7301, "sku": "SKU003", "qty": 20, "fromLocation": "A-01-03", "toLocation": "B-02-01", "status": "待审核" }
+  ],
+  "total": 1
+}

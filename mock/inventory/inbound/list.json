@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "id": 7001, "supplier": "供应商A", "skuCount": 10, "status": "待入库", "arrivalDate": "2025-12-04", "createdAt": "2025-12-04 10:00" }
+  ],
+  "total": 1
+}
