@@ -4,8 +4,8 @@
       <template #renderItem="{ item }">
         <a-list-item>
           <a-card :hoverable="true" :bodyStyle="{ padding: 0 }">
-            <div class="thumb" :class="ctx.state.view">
-              <a-image :src="item.src" :preview="true" class="img" />
+            <div class="thumb">
+              <video :src="item.src" :poster="item.cover" class="video" controls />
             </div>
             <div class="meta">
               <span class="name">{{ item.name }}</span>
@@ -22,16 +22,15 @@
 
 <script setup>
 import { inject, computed } from 'vue'
-const ctx = inject('materialImage')
-const grid = computed(() => ({ gutter: 20, column: ctx.state.view==='big' ? 6 : 10 }))
+const ctx = inject('materialVideo')
+const grid = computed(() => ({ gutter: 20, column: ctx.state.view==='big' ? 5 : 8 }))
 function onPage(p){ ctx.onPageChange(p, ctx.state.pageSize) }
 function onSize(p, ps){ ctx.onPageChange(p, ps) }
 </script>
 
 <style scoped>
-.thumb { width: 100%; aspect-ratio: 1; }
-.thumb.small { aspect-ratio: 1; }
-.img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb { width: 100%; aspect-ratio: 16 / 9; }
+.video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .meta { margin-top: 20px; color: #667085; font-size: 12px; padding: 0 12px; }
 .name { display: inline-block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 </style>

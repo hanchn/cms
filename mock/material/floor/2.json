@@ -1,0 +1,5 @@
+{
+  "id": 2,
+  "name": "楼层模板 B",
+  "content": "<div style=\"padding:24px\"><h3>楼层 B</h3><ul><li>条目 1</li><li>条目 2</li></ul></div>"
+}

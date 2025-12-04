@@ -1,0 +1,5 @@
+{
+  "id": 1,
+  "name": "楼层模板 A",
+  "content": "<div style=\"padding:24px\"><h3>楼层 A</h3><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:12px\"><div style=\"background:#f4f4f5;padding:12px\">块1</div><div style=\"background:#f4f4f5;padding:12px\">块2</div></div></div>"
+}
