@@ -1,4 +1,5 @@
 <template>
+  <div class="filter-wrap">
   <a-form layout="inline" @submit.prevent>
     <a-form-item label="名称">
       <a-input v-model:value="local.name" allowClear placeholder="菜单名称" style="width:200px" />
@@ -21,13 +22,16 @@
       <a-button @click="reset">重置</a-button>
     </a-space>
   </a-form>
+  </div>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
 import { inject, reactive } from 'vue'
 const ctx = inject('systemMenu')
 const local = reactive({ name: '', status: undefined, type: undefined })
 function emitSearch(){ ctx.onSearch({ ...local }) }
 function reset(){ local.name=''; local.status=undefined; local.type=undefined; emitSearch() }
 </script>
+<style scoped>
+.filter-wrap { margin-bottom: 16px; }
+</style>

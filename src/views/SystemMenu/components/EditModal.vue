@@ -1,5 +1,5 @@
 <template>
-  <a-modal :open="ctx.state.visible" title="菜单" @cancel="ctx.state.visible=false" @ok="submit" destroyOnClose>
+  <a-modal :open="ctx.state.visible" title="菜单" @cancel="ctx.state.visible=false" @ok="submit" okText="保存" cancelText="取消" destroyOnClose>
     <a-form :model="form" layout="vertical">
       <a-form-item label="名称" required>
         <a-input v-model:value="form.name" placeholder="请输入名称" />
@@ -23,14 +23,18 @@
       <a-form-item label="排序">
         <a-input-number v-model:value="form.order" :min="0" style="width:100%" />
       </a-form-item>
+      <a-form-item v-if="ctx.state.batchMode==='add'" label="批量添加数量">
+        <a-input-number v-model:value="batchCount" :min="1" :max="20" style="width:100%" />
+      </a-form-item>
     </a-form>
   </a-modal>
 </template>
 
 <script setup>
-import { inject, watch, reactive } from 'vue'
+import { inject, watch, reactive, ref } from 'vue'
 const ctx = inject('systemMenu')
 const form = reactive({ name: '', path: '', type: 'menu', status: 'enabled', order: 0 })
+const batchCount = ref(1)
 watch(() => ctx.state.current, (val) => {
   if (val) {
     form.name = val.name
@@ -46,5 +50,5 @@ watch(() => ctx.state.current, (val) => {
     form.order=0
   }
 }, { immediate: true })
-function submit(){ ctx.onSubmit({ ...form }) }
+function submit(){ ctx.onSubmit({ ...form, batchCount: batchCount.value }) }
 </script>

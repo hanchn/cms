@@ -1,6 +1,39 @@
 [
   { "key": "Dashboard", "title": "仪表盘", "path": "/dashboard", "layout": true },
   {
+    "key": "Product",
+    "title": "产品",
+    "layout": true,
+    "children": [
+      { "key": "ProductList", "title": "产品列表", "path": "/productlist", "layout": true },
+      { "key": "ProductCategory", "title": "产品分类", "path": "/productcategory", "layout": true }
+    ]
+  },
+  {
+    "key": "Goods",
+    "title": "商品",
+    "layout": true,
+    "children": [
+      { "key": "GoodsList", "title": "商品列表", "path": "/goodslist", "layout": true },
+      { "key": "GoodsCategory", "title": "商品分类", "path": "/goodscategory", "layout": true },
+      { "key": "GoodsTag", "title": "商品标签", "path": "/goodstag", "layout": true },
+      { "key": "GoodsBrand", "title": "商品品牌", "path": "/goodsbrand", "layout": true }
+    ]
+  },
+  { "key": "MasterData", "title": "主数据", "path": "/masterdata", "layout": true },
+  { "key": "I18n", "title": "多语言", "path": "/i18n", "layout": true },
+  { "key": "Tools", "title": "工具", "path": "/tools", "layout": true },
+  { "key": "User", "title": "用户", "path": "/user", "layout": true },
+  { "key": "ABTest", "title": "AB规则", "path": "/abtest", "layout": true },
+  {
+    "key": "Activity",
+    "title": "活动",
+    "layout": true,
+    "children": [
+      { "key": "ActivityList", "title": "活动列表", "path": "/activitylist", "layout": true }
+    ]
+  },
+  {
     "key": "SystemConfig",
     "title": "系统配置",
     "layout": true,
@@ -19,6 +52,8 @@
       { "key": "MaterialVideo", "title": "视频素材", "path": "/materialvideo", "layout": true },
       { "key": "MaterialTemplate", "title": "模板素材", "path": "/materialtemplate", "layout": true },
       { "key": "MaterialFloor", "title": "楼层素材", "path": "/materialfloor", "layout": true }
+      ,{ "key": "MaterialEmailTemplate", "title": "邮件模板", "path": "/materialemailtemplate", "layout": true }
+      ,{ "key": "MaterialBoardTemplate", "title": "仪表素材", "path": "/materialboardtemplate", "layout": true }
     ]
   }
 ]

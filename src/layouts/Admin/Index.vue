@@ -25,7 +25,7 @@
           <a-button v-else type="primary" size="small" @click="login">登录</a-button>
         </div>
       </a-layout-header>
-      <a-layout-content style="padding: 24px">
+      <a-layout-content class="content">
         <slot />
       </a-layout-content>
     </a-layout>
@@ -50,4 +50,5 @@ function logout(){ auth.logout(); localStorage.removeItem('token'); router.repla
 .header-left { display: flex; align-items: center; gap: 8px; }
 .header-right { display: flex; align-items: center; gap: 12px; }
 .header-right :deep(.ant-avatar) { box-shadow: 0 0 0 1px rgba(255,255,255,0.3); }
+.content { background: #fff; padding: 24px; margin: 20px; border-radius: 8px; min-height: calc(100vh - 64px - 40px); }
 </style>
