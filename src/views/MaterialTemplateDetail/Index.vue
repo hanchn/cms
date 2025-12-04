@@ -17,7 +17,7 @@ import Preview from './components/Preview.vue'
 import { fetchTemplate, saveTemplate } from '@apis/material/template'
 
 const route = useRoute()
-const state = reactive({ currentId: null, name: '', content: '', loading: false, saving: false })
+const state = reactive({ currentId: null, name: '', content: '', html: '', css: '', js: '', loading: false, saving: false })
 
 async function load(){
   const id = Number(route.query.id)
@@ -27,10 +27,23 @@ async function load(){
   state.currentId = id
   state.name = res.name || ''
   state.content = res.content || ''
+  // parse into html/css/js
+  const cssMatch = res.content?.match(/<style[^>]*>([\s\S]*?)<\/style>/i)
+  const jsMatch = res.content?.match(/<script[^>]*>([\s\S]*?)<\/script>/i)
+  state.css = cssMatch ? cssMatch[1] : ''
+  state.js = jsMatch ? jsMatch[1] : ''
+  state.html = res.content?.replace(/<style[^>]*>[\s\S]*?<\/style>/i, '').replace(/<script[^>]*>[\s\S]*?<\/script>/i, '') || ''
   state.loading = false
 }
 
-async function save(){ state.saving = true; await saveTemplate({ id: state.currentId, name: state.name, content: state.content }); state.saving = false }
+async function save(){
+  state.saving = true
+  const css = state.css ? `<style>${state.css}</style>` : ''
+  const js = state.js ? `<script>${state.js}</script>` : ''
+  const content = `${css}${state.html || ''}${js}`
+  await saveTemplate({ id: state.currentId, name: state.name, content })
+  state.saving = false
+}
 
 provide('materialTemplateDetail', { state, save })
 onMounted(load)
