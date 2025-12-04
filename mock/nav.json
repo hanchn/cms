@@ -24,6 +24,7 @@
   { "key": "I18n", "title": "多语言", "path": "/i18n", "layout": true },
   { "key": "Tools", "title": "工具", "path": "/tools", "layout": true },
   { "key": "User", "title": "用户", "path": "/user", "layout": true },
+  { "key": "Track", "title": "埋点", "path": "/track", "layout": true },
   { "key": "ABTest", "title": "AB规则", "path": "/abtest", "layout": true },
   {
     "key": "Activity",

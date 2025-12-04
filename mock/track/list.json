@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "id": 1, "name": "首页曝光", "requirement": "统计首页曝光次数", "format": "{page:'home', event:'expo'}", "implementation": "前端 PV 埋点 + 发送至日志系统" },
+    { "id": 2, "name": "商品点击", "requirement": "统计商品点击转化", "format": "{page:'goods', event:'click', id:'xxx'}", "implementation": "列表项点击事件上报，附带商品ID" }
+  ],
+  "total": 2
+}
