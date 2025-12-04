@@ -1,0 +1,11 @@
+{
+  "id": 4001,
+  "orderId": 1003,
+  "type": "仅退款",
+  "amount": 89,
+  "status": "待审核",
+  "reason": "质量问题",
+  "timeline": [
+    { "type": "apply", "time": "2025-12-03 13:00", "desc": "用户发起退款" }
+  ]
+}

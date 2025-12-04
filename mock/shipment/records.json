@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "id": 3001, "orderId": 1002, "packageNo": "PKG1002-1", "logistics": "SF", "status": "已发货", "shippedAt": "2025-12-02 13:00" }
+  ],
+  "total": 1
+}

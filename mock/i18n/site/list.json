@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "id": 1, "siteCode": "main", "siteName": "主站", "langCode": "zh-CN", "langName": "简体中文", "default": true, "status": "enabled" },
+    { "id": 2, "siteCode": "intl", "siteName": "国际站", "langCode": "en-US", "langName": "English", "default": true, "status": "enabled" },
+    { "id": 3, "siteCode": "hk", "siteName": "港澳站", "langCode": "zh-HK", "langName": "繁體中文", "default": false, "status": "enabled" }
+  ],
+  "total": 3
+}

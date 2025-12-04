@@ -1,0 +1,16 @@
+{
+  "id": 1002,
+  "status": "待发货",
+  "channel": "app",
+  "createdAt": "2025-12-02 11:20",
+  "customer": { "name": "李四", "phone": "13900000000" },
+  "items": [
+    { "sku": "SKU003", "name": "商品C", "qty": 2, "price": 149.5 }
+  ],
+  "amounts": { "subtotal": 299, "freight": 10, "discount": 20, "tax": 0, "payable": 289, "paid": 289 },
+  "address": { "receiver": "李四", "mobile": "13900000000", "region": "杭州市西湖区", "detail": "文三路 66 号" },
+  "timeline": [
+    { "type": "create", "time": "2025-12-02 11:20", "desc": "订单创建" },
+    { "type": "pay", "time": "2025-12-02 11:22", "desc": "支付成功" }
+  ]
+}

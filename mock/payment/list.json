@@ -1,0 +1,7 @@
+{
+  "items": [
+    { "id": 5001, "orderId": 1002, "channel": "alipay", "tradeNo": "T202512021122", "amount": 289, "type": "pay", "time": "2025-12-02 11:22", "reconciled": true },
+    { "id": 5002, "orderId": 1003, "channel": "wechat", "tradeNo": "T202512031215", "amount": 89, "type": "refund", "time": "2025-12-03 12:15", "reconciled": false }
+  ],
+  "total": 2
+}

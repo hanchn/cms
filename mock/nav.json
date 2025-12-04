@@ -20,6 +20,24 @@
       { "key": "GoodsBrand", "title": "商品品牌", "path": "/goodsbrand", "layout": true }
     ]
   },
+  { "key": "Inventory", "title": "库存", "path": "/inventory", "layout": true },
+  {
+    "key": "Order",
+    "title": "订单",
+    "layout": true,
+    "children": [
+      { "key": "OrderList", "title": "订单列表", "path": "/orderlist", "layout": true },
+      { "key": "OrderDetail", "title": "订单详情", "path": "/orderdetail", "layout": true },
+      { "key": "Shipment", "title": "发货管理", "path": "/shipment", "layout": true },
+      { "key": "OrderRefund", "title": "退款售后", "path": "/orderrefund", "layout": true },
+      { "key": "Payment", "title": "支付记录", "path": "/payment", "layout": true },
+      { "key": "Logistics", "title": "物流跟踪", "path": "/logistics", "layout": true }
+    ]
+  },
+  { "key": "Selection", "title": "选品", "path": "/selection", "layout": true },
+  { "key": "Customer", "title": "客户管理", "path": "/customer", "layout": true },
+  { "key": "Service", "title": "客服", "path": "/service", "layout": true },
+  { "key": "SupplyChain", "title": "供应链", "path": "/supplychain", "layout": true },
   {
     "key": "MasterData",
     "title": "主数据",
@@ -33,10 +51,19 @@
     "title": "多语言",
     "layout": true,
     "children": [
-      { "key": "I18nList", "title": "多语言列表", "path": "/i18nlist", "layout": true }
+      { "key": "I18nList", "title": "多语言列表", "path": "/i18nlist", "layout": true },
+      { "key": "I18nSite", "title": "站点语言", "path": "/i18nsite", "layout": true }
     ]
   },
   { "key": "Tools", "title": "工具", "path": "/tools", "layout": true },
+  {
+    "key": "Debug",
+    "title": "开发调试",
+    "layout": true,
+    "children": [
+      { "key": "RetryTest", "title": "重试演示", "path": "/debugretrytest", "layout": true }
+    ]
+  },
   { "key": "User", "title": "用户", "path": "/user", "layout": true },
   {
     "key": "Track",

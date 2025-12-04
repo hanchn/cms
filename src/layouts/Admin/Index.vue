@@ -7,7 +7,6 @@
     <a-layout>
       <a-layout-header class="header">
         <div class="header-left">
-          <a-button type="link" @click="collapsed = !collapsed">{{ collapsed ? '展开菜单' : '折叠菜单' }}</a-button>
         </div>
         <div class="header-right">
           <a-dropdown v-if="auth.loggedIn">

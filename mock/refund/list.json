@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "id": 4001, "orderId": 1003, "type": "仅退款", "amount": 89, "status": "待审核", "createdAt": "2025-12-03 13:00" }
+  ],
+  "total": 1
+}

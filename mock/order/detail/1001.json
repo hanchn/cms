@@ -1,0 +1,16 @@
+{
+  "id": 1001,
+  "status": "待支付",
+  "channel": "web",
+  "createdAt": "2025-12-01 10:00",
+  "customer": { "name": "张三", "phone": "13800000000" },
+  "items": [
+    { "sku": "SKU001", "name": "商品A", "qty": 1, "price": 99 },
+    { "sku": "SKU002", "name": "商品B", "qty": 1, "price": 100 }
+  ],
+  "amounts": { "subtotal": 199, "freight": 0, "discount": 0, "tax": 0, "payable": 199, "paid": 0 },
+  "address": { "receiver": "张三", "mobile": "13800000000", "region": "上海市浦东新区", "detail": "张江路 888 号" },
+  "timeline": [
+    { "type": "create", "time": "2025-12-01 10:00", "desc": "订单创建" }
+  ]
+}

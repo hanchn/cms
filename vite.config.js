@@ -9,8 +9,40 @@ export default defineConfig({
     {
       name: 'mock-server',
       configureServer(server) {
+        const failCounters = Object.create(null)
         server.middlewares.use('/mock', (req, res, next) => {
-          const reqPath = req.url || '/'
+          const url = new URL(req.url || '/', 'http://localhost')
+          const reqPath = url.pathname || '/'
+
+          // Mock explicit status code: /mock/_status/<code>
+          if (reqPath.startsWith('/_status/')) {
+            const codeStr = reqPath.split('/')[2] || '500'
+            const code = Number(codeStr) || 500
+            res.statusCode = code
+            res.setHeader('Content-Type', 'application/json')
+            res.end(JSON.stringify({ message: `Mocked ${code}` }))
+            return
+          }
+
+          // Fail first N times then return success JSON: /mock/_fail/<times>
+          if (reqPath.startsWith('/_fail/')) {
+            const timesStr = reqPath.split('/')[2] || '1'
+            const times = Math.max(1, Number(timesStr) || 1)
+            const key = url.pathname + (url.search || '')
+            failCounters[key] = failCounters[key] || 0
+            if (failCounters[key] < times) {
+              failCounters[key]++
+              res.statusCode = 500
+              res.setHeader('Content-Type', 'application/json')
+              res.end(JSON.stringify({ message: 'Internal Server Error', attempt: failCounters[key] }))
+              return
+            }
+            res.statusCode = 200
+            res.setHeader('Content-Type', 'application/json')
+            res.end(JSON.stringify({ success: true, attempts: failCounters[key] }))
+            return
+          }
+
           const filePath = path.join(process.cwd(), 'mock', reqPath.replace(/^\/?/, ''))
           if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
             res.setHeader('Content-Type', 'application/json')

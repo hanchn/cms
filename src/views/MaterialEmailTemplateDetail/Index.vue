@@ -26,18 +26,12 @@ async function load(){
   state.currentId = id
   state.name = res.name || ''
   state.content = res.content || ''
-  const cssMatch = res.content?.match(/<style[^>]*>([\s\S]*?)<\/style>/i)
-  const jsMatch = res.content?.match(/<script[^>]*>([\s\S]*?)<\/script>/i)
-  state.css = cssMatch ? cssMatch[1] : ''
-  state.js = jsMatch ? jsMatch[1] : ''
-  state.html = res.content?.replace(/<style[^>]*>[\s\S]*?<\/style>/i, '').replace(/<script[^>]*>[\s\S]*?<\/script>/i, '') || ''
+  
   state.loading=false
 }
 async function save(){
   state.saving = true
-  const css = state.css ? `<style>${state.css}</style>` : ''
-  const js = state.js ? `<script>${state.js}</script>` : ''
-  const content = `${css}${state.html || ''}${js}`
+  const content = state.content || ''
   await saveEmailTemplate({ id: state.currentId, name: state.name, content })
   state.saving = false
 }

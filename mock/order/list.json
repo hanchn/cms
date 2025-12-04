@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "id": 1001, "status": "待支付", "channel": "web", "createdAt": "2025-12-01 10:00", "amount": 199.00, "customer": "张三" },
+    { "id": 1002, "status": "待发货", "channel": "app", "createdAt": "2025-12-02 11:20", "amount": 299.00, "customer": "李四" },
+    { "id": 1003, "status": "已完成", "channel": "web", "createdAt": "2025-12-03 12:30", "amount": 89.00, "customer": "王五" }
+  ],
+  "total": 3
+}
